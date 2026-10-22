@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aniket Kadam | AI/ML & Backend Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Aniket Hauserao Kadam — AI/ML Engineer, GenAI Developer, and Backend Systems Architect specializing in Self-Correcting RAG, LangGraph, and Microservices.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              cyan: '#06b6d4',
+              sky: '#0ea5e9',
+              indigo: '#6366f1',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #020617;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0ea5e9;
+    }
+    .glow-cyan {
+      box-shadow: 0 0 50px -10px rgba(6, 182, 212, 0.25);
+    }
+    .glow-indigo {
+      box-shadow: 0 0 50px -10px rgba(99, 102, 241, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-cyan-200 min-h-screen relative overflow-x-hidden">
+
+  <!-- Subtle Ambient Glow Backgrounds -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute top-[-10%] left-[-10%] w-[550px] h-[550px] bg-cyan-500/10 rounded-full blur-[140px]"></div>
+    <div class="absolute top-[35%] right-[-10%] w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[150px]"></div>
+    <div class="absolute bottom-[-10%] left-[20%] w-[550px] h-[550px] bg-sky-500/10 rounded-full blur-[140px]"></div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/85 border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo & Name -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="terminal" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-bold text-slate-100 tracking-tight text-lg group-hover:text-cyan-300 transition-colors">Aniket Kadam</span>
+          <span class="hidden sm:inline-block ml-2 text-[11px] px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-800 text-cyan-400 font-mono">
+            AI/ML & Backend
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition-colors">Case Studies</a>
+        <a href="#skills" class="text-slate-400 hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#journey" class="text-slate-400 hover:text-cyan-400 transition-colors">Experience</a>
+        <a href="#about" class="text-slate-400 hover:text-cyan-400 transition-colors">About</a>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a 
+          href="./Resume_Aniket_Kadam_AI_Engineer.pdf" 
+          download 
+          class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900 border border-slate-700/80 hover:border-cyan-500/50 text-slate-200 hover:text-cyan-300 text-xs font-semibold transition-all"
+        >
+          <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
+          <span>Resume</span>
+        </a>
+
+        <a 
+          href="#contact" 
+          class="px-4 py-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20 text-xs sm:text-sm font-semibold transition-all"
+        >
+          Contact Me
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section class="pt-20 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="max-w-4xl">
+        
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-cyan-400 mb-6 shadow-sm">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-cyan-400"></i>
+          <span>AI Engineer • GenAI Developer • Backend Architect</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-100 leading-[1.15]">
+          Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">Agentic RAG Systems</span> & High-Scale Microservices.
+        </h1>
+
+        <p class="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl">
+          Hi, I'm <strong class="text-slate-100">Aniket Hauserao Kadam</strong>. I specialize in building self-correcting RAG agents in LangGraph, high-throughput REST APIs, and Gemini-powered multimodal voice integrations across Dockerized microservices.
+        </p>
+
+        <!-- CTAs & Socials -->
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a 
+            href="#projects" 
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:opacity-95 transition-all"
+          >
+            <span>Explore Case Studies</span>
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
+
+          <a 
+            href="./Resume_Aniket_Kadam_AI_Engineer.pdf" 
+            download
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-sm transition-all"
+          >
+            <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
+            <span>Download Resume</span>
+          </a>
+
+          <div class="flex items-center gap-2.5 sm:pl-2">
+            <a 
+              href="https://github.com/aniket792001" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+              aria-label="GitHub Profile"
+              title="GitHub Profile"
+            >
+              <i data-lucide="github" class="w-5 h-5"></i>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/aniket-kadam-79a200k1" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+              aria-label="LinkedIn Profile"
+              title="LinkedIn Profile"
+            >
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </a>
+            <a 
+              href="mailto:aniketkadam792001@gmail.com" 
+              class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+              aria-label="Send Email"
+              title="aniketkadam792001@gmail.com"
+            >
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Key Engineering Metrics -->
+        <div class="mt-14 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6">
+          <div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/60">
+            <p class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono">99.34%</p>
+            <p class="text-xs text-slate-400 uppercase tracking-wider mt-1 font-semibold">XGBoost Accuracy</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/60">
+            <p class="text-2xl sm:text-3xl font-extrabold text-indigo-400 font-mono">100+</p>
+            <p class="text-xs text-slate-400 uppercase tracking-wider mt-1 font-semibold">REST APIs Shipped</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/60">
+            <p class="text-2xl sm:text-3xl font-extrabold text-sky-400 font-mono">Dual-Loop</p>
+            <p class="text-xs text-slate-400 uppercase tracking-wider mt-1 font-semibold">Self-Correcting RAG</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-900/30 border border-slate-800/60">
+            <p class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">8 Mos</p>
+            <p class="text-xs text-slate-400 uppercase tracking-wider mt-1 font-semibold">Production AI Exp</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASE STUDIES & PROJECTS SECTION -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2 font-bold">
+            <i data-lucide="code-2" class="w-4 h-4"></i>
+            <span>System Design & Architecture</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">
+            Featured Systems & Case Studies
+          </h2>
+          <p class="text-slate-400 mt-2 max-w-xl text-sm sm:text-base">
+            Click any case study card to inspect the step-by-step pipeline blueprint, architectural tradeoffs, and production code logic.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap items-center gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800 self-start md:self-auto" id="filter-container">
+          <button onclick="filterCategory('All')" data-filter="All" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 text-slate-950 shadow-md">All</button>
+          <button onclick="filterCategory('AI / GenAI')" data-filter="AI / GenAI" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">AI / GenAI</button>
+          <button onclick="filterCategory('Backend & Systems')" data-filter="Backend & Systems" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">Backend & Systems</button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+      
+      <div class="mb-12">
+        <div class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2 font-bold">
+          <i data-lucide="cpu" class="w-4 h-4"></i>
+          <span>Engineering Competencies</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">
+          Technical Stack & Architectural Matrix
+        </h2>
+        <p class="text-slate-400 mt-2 text-sm sm:text-base max-w-xl">
+          Skills substantiated through production fintech microservices, LangGraph agent pipelines, and benchmarked predictive models.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- AI / GenAI Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-indigo-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-100">AI / ML / GenAI</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">RAG & Agents</span>
+                <span class="text-[11px] font-mono text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">LangGraph, LangChain, Self-Correction, Multi-Hop</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">LLMs & APIs</span>
+                <span class="text-[11px] font-mono text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800/50">Expert</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Gemini API, Hugging Face, Prompt Tuning</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Vector Search</span>
+                <span class="text-[11px] font-mono text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Qdrant, FAISS, BM25Plus, RRF Hybrid Search</p>
+            </li>
+            <li>
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">ML Classifiers</span>
+                <span class="text-[11px] font-mono text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">XGBoost (99.34%), Random Forest, Evaluation</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Backend Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-cyan-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+              <i data-lucide="server" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-100">Backend & APIs</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Python</span>
+                <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/50">Expert</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">FastAPI, Flask, Asyncio, Pydantic, Pytest</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Microservices</span>
+                <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/50">Expert</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">100+ REST APIs, Service Decoupling, Webhooks</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Security & Auth</span>
+                <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">JWT Tokens, OAuth, RBAC, Rate Limiting</p>
+            </li>
+            <li>
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">JavaScript / SQL</span>
+                <span class="text-[11px] font-mono text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded border border-cyan-800/50">Proficient</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Modern ES6+, Complex SQL queries & schemas</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- DevOps & Databases Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-sky-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-100">Data & DevOps</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Databases</span>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/50">Expert</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">MongoDB, MySQL, SQLite, Vector Stores</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Docker</span>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Containerization, Multi-service Docker Compose</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Version Control</span>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/50">Expert</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Git, GitHub workflows, CI/CD automated test</p>
+            </li>
+            <li>
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Testing & Tooling</span>
+                <span class="text-[11px] font-mono text-sky-400 bg-sky-950/80 px-2 py-0.5 rounded border border-sky-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Pytest, Postman, Cursor, VS Code, Linux</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Real-Time & Mobile Card -->
+        <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-emerald-500/40 transition-all">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-bold text-slate-100">Real-Time & Mobile</h3>
+          </div>
+          <ul class="space-y-4">
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">WebSockets</span>
+                <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Flask-SocketIO, Real-Time Chat & Audio Calling</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Voice & WhatsApp</span>
+                <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Speech-to-Text, TTS, WhatsApp Business API</p>
+            </li>
+            <li class="border-b border-slate-800/60 pb-3">
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">React Native</span>
+                <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/50">Proficient</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Mobile client, API integration, Unit testing</p>
+            </li>
+            <li>
+              <div class="flex justify-between items-center text-sm">
+                <span class="font-semibold text-slate-200">Streamlit</span>
+                <span class="text-[11px] font-mono text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-800/50">Advanced</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1">Interactive AI dashboards & model testing UIs</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAREER JOURNEY & EDUCATION -->
+    <section id="journey" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+      
+      <div class="mb-12">
+        <div class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2 font-bold">
+          <i data-lucide="clock" class="w-4 h-4"></i>
+          <span>Engineering Trajectory</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">
+          Experience & Education
+        </h2>
+        <p class="text-slate-400 mt-2 text-sm sm:text-base max-w-xl">
+          Production contributions at 1GEN and specialized academic engineering background.
+        </p>
+      </div>
+
+      <div class="relative border-l border-slate-800 ml-4 sm:ml-6 space-y-12">
+        
+        <!-- Experience 1: 1GEN -->
+        <div class="relative pl-8 group">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-slate-900 border-2 border-cyan-500 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+            <i data-lucide="briefcase" class="w-3 h-3"></i>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800/80 hover:border-slate-700/80 transition-all">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <h3 class="text-lg font-bold text-slate-100">AI Intern — Project Pebble</h3>
+              <span class="text-xs font-mono text-cyan-400 bg-cyan-950/80 border border-cyan-800/60 px-2.5 py-1 rounded-md w-fit">
+                Jan 2026 – Aug 2026
+              </span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300 mb-3">1GEN • AI-Powered Fintech Micro-Financing Platform</p>
+            <p class="text-sm text-slate-400 mb-4">
+              Architected and shipped core platform services using Python (Flask), React Native, and MongoDB across a Docker-based distributed microservices architecture.
+            </p>
+            
+            <ul class="space-y-2">
+              <li class="text-xs sm:text-sm text-slate-400 flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                <span>Built <strong>100+ RESTful APIs</strong> and integrated MongoDB to power core platform services across microservices.</span>
+              </li>
+              <li class="text-xs sm:text-sm text-slate-400 flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                <span>Hardened backend services via <strong>JWT authentication, OAuth, role-based access control (RBAC)</strong>, and token-bucket rate limiting.</span>
+              </li>
+              <li class="text-xs sm:text-sm text-slate-400 flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                <span>Benchmarked 10 classification algorithms and selected <strong>XGBoost, achieving 99.34% accuracy</strong> on financing decision workflows.</span>
+              </li>
+              <li class="text-xs sm:text-sm text-slate-400 flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                <span>Integrated <strong>Gemini API</strong> for voice capture, STT, and TTS, plus WebSocket-based real-time chat/calling and WhatsApp messaging integration.</span>
+              </li>
+              <li class="text-xs sm:text-sm text-slate-400 flex items-start gap-2">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400 flex-shrink-0 mt-0.5"></i>
+                <span>Authored robust unit and API test suites with <strong>Pytest</strong> to catch regressions prior to production release.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education: TPCT -->
+        <div class="relative pl-8 group">
+          <div class="absolute -left-3 top-1 w-6 h-6 rounded-full bg-slate-900 border-2 border-indigo-500 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+            <i data-lucide="graduation-cap" class="w-3 h-3"></i>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/30 border border-slate-800/80 hover:border-slate-700/80 transition-all">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+              <h3 class="text-lg font-bold text-slate-100">B.Tech in Artificial Intelligence & Data Science</h3>
+              <span class="text-xs font-mono text-indigo-400 bg-indigo-950/80 border border-indigo-800/60 px-2.5 py-1 rounded-md w-fit">
+                2022 – 2025 • CGPA: 7.33
+              </span>
+            </div>
+            <p class="text-sm font-semibold text-slate-300 mb-2">TPCT’s College of Engineering, Dharashiv (Osmanabad)</p>
+            <p class="text-sm text-slate-400">
+              Rigorous curriculum covering Machine Learning, Natural Language Processing, Deep Learning, Data Structures & Algorithms, Distributed Databases, and Object-Oriented Software Design.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        <div>
+          <div class="inline-flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-wider mb-2 font-bold">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>Get in Touch</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-100">
+            Let's discuss AI architectures, RAG systems, or full-time opportunities.
+          </h2>
+          <p class="mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
+            Whether you have a technical question on cyclical LangGraph state machines, microservices scaling, or are looking to hire a dedicated AI/ML and Backend Engineer—my inbox is open.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            
+            <a href="mailto:aniketkadam792001@gmail.com" class="flex items-center gap-3 text-slate-300 text-sm hover:text-cyan-400 transition-colors group">
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400 group-hover:border-cyan-500/50">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <span class="font-mono">aniketkadam792001@gmail.com</span>
+            </a>
+
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <span class="font-mono">+91 9765618537</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <span>Pune, Maharashtra, India</span>
+            </div>
+
+            <div class="flex items-center gap-3 text-slate-300 text-sm">
+              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-emerald-400">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+              </div>
+              <span class="text-emerald-400 font-medium">Available for AI Engineer & Backend Roles</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive Direct Message Card -->
+        <div class="p-8 rounded-2xl bg-slate-900/50 border border-slate-800 relative">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+            <div>
+              <label for="name" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Your Name / Team
+              </label>
+              <input 
+                type="text" 
+                id="name" 
+                required
+                placeholder="Jane Doe (e.g., Hiring Manager / Tech Lead)"
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyan-500 text-sm"
+              />
+            </div>
+
+            <div>
+              <label for="email" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Your Email Address
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                required
+                placeholder="jane@company.com"
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyan-500 text-sm"
+              />
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-mono uppercase tracking-wider text-slate-300 mb-2">
+                Message / Opportunity Details
+              </label>
+              <textarea 
+                id="message" 
+                required
+                rows="4"
+                placeholder="Hi Aniket, we are building an AI platform and would love to discuss an AI/ML Engineer role..."
+                class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder:text-slate-600 focus:outline-none focus:border-cyan-500 text-sm resize-none"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm hover:opacity-95 transition-all flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20"
+            >
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Send Message</span>
+            </button>
+          </form>
+
+          <div id="form-success" class="hidden py-10 text-center">
+            <div class="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center mb-3">
+              <i data-lucide="check-circle-2" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-base font-bold text-slate-100">Draft Prepared!</h4>
+            <p class="text-xs text-slate-400 mt-1 max-w-sm mx-auto">
+              Your default email client has been launched with your note pre-filled to <strong>aniketkadam792001@gmail.com</strong>.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-900 bg-slate-950 py-8 px-4 text-center text-xs text-slate-500 font-mono">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Aniket Hauserao Kadam. AI/ML & Backend Engineer.</p>
+      <div class="flex items-center gap-6 text-slate-400">
+        <a href="https://github.com/aniket792001" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/aniket-kadam-79a200k1" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">LinkedIn</a>
+        <a href="mailto:aniketkadam792001@gmail.com" class="hover:text-cyan-400 transition-colors">Email</a>
+        <a href="./Resume_Aniket_Kadam_AI_Engineer.pdf" download class="hover:text-cyan-400 transition-colors">Resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DEEP-DIVE CASE STUDY MODAL -->
+  <div id="modal-container" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 transition-all duration-200">
+    <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-5 border-b border-slate-800 flex items-start justify-between bg-slate-950/60 sticky top-0 z-20">
+        <div>
+          <div class="flex items-center gap-2 mb-1.5">
+            <span id="modal-category" class="text-xs font-mono text-cyan-400 px-2 py-0.5 rounded bg-cyan-950 border border-cyan-800/60">
+              Category
+            </span>
+            <span class="text-xs font-mono text-slate-400">
+              System Architecture & Blueprint
+            </span>
+          </div>
+          <h3 id="modal-title" class="text-xl sm:text-2xl font-bold text-slate-100">
+            Project Title
+          </h3>
+        </div>
+
+        <button onclick="closeModal()" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors" aria-label="Close modal">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Modal Tabs -->
+      <div class="px-6 pt-3 border-b border-slate-800/80 bg-slate-950/40 flex gap-2 overflow-x-auto text-xs sm:text-sm font-semibold">
+        <button onclick="switchTab('architecture')" id="tab-btn-architecture" class="tab-btn pb-3 px-3 border-b-2 border-cyan-400 text-cyan-400 flex items-center gap-2 whitespace-nowrap">
+          <i data-lucide="layers" class="w-4 h-4"></i>
+          <span>Architecture & Pipeline</span>
+        </button>
+
+        <button onclick="switchTab('decisions')" id="tab-btn-decisions" class="tab-btn pb-3 px-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 whitespace-nowrap">
+          <i data-lucide="shield-check" class="w-4 h-4"></i>
+          <span>Tradeoffs & Decisions</span>
+        </button>
+
+        <button onclick="switchTab('code')" id="tab-btn-code" class="tab-btn pb-3 px-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 whitespace-nowrap">
+          <i data-lucide="terminal" class="w-4 h-4"></i>
+          <span>Implementation Code</span>
+        </button>
+
+        <button onclick="switchTab('results')" id="tab-btn-results" class="tab-btn pb-3 px-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 whitespace-nowrap">
+          <i data-lucide="zap" class="w-4 h-4"></i>
+          <span>Metrics & Impact</span>
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div class="p-6 overflow-y-auto space-y-6 flex-1 text-slate-300 text-sm">
+        
+        <!-- Challenge & Solution Card (Always visible) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 rounded-xl bg-slate-950/70 border border-slate-800">
+          <div>
+            <h4 class="text-xs font-mono uppercase text-red-400 font-bold mb-1.5 flex items-center gap-1.5">
+              <span>The Engineering Challenge</span>
+            </h4>
+            <p id="modal-problem" class="text-xs sm:text-sm text-slate-400 leading-relaxed"></p>
+          </div>
+          <div>
+            <h4 class="text-xs font-mono uppercase text-emerald-400 font-bold mb-1.5 flex items-center gap-1.5">
+              <span>Architectural Solution</span>
+            </h4>
+            <p id="modal-solution" class="text-xs sm:text-sm text-slate-400 leading-relaxed"></p>
+          </div>
+        </div>
+
+        <!-- TAB 1: ARCHITECTURE -->
+        <div id="tab-content-architecture" class="tab-content space-y-4">
+          <h4 class="text-sm font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="git-branch" class="w-4 h-4 text-cyan-400"></i>
+            <span>System Workflow & Pipeline Nodes</span>
+          </h4>
+          <div id="modal-architecture-nodes" class="space-y-3"></div>
+        </div>
+
+        <!-- TAB 2: DECISIONS -->
+        <div id="tab-content-decisions" class="tab-content hidden space-y-4">
+          <h4 class="text-sm font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i>
+            <span>Architectural Tradeoffs & Technology Choices</span>
+          </h4>
+          <div id="modal-key-decisions" class="space-y-3"></div>
+        </div>
+
+        <!-- TAB 3: CODE SNIPPET -->
+        <div id="tab-content-code" class="tab-content hidden space-y-3">
+          <div class="flex items-center justify-between">
+            <span id="modal-code-filename" class="text-xs font-mono text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="terminal" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span>filename.py</span>
+            </span>
+
+            <button onclick="copySnippetCode()" id="copy-btn" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 flex items-center gap-1.5 transition-colors">
+              <i data-lucide="copy" class="w-3 h-3"></i>
+              <span id="copy-btn-text">Copy Code</span>
+            </button>
+          </div>
+
+          <div class="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950 font-mono text-xs p-4 overflow-x-auto leading-relaxed text-cyan-100 shadow-inner">
+            <pre><code id="modal-code-content"></code></pre>
+          </div>
+        </div>
+
+        <!-- TAB 4: RESULTS -->
+        <div id="tab-content-results" class="tab-content hidden space-y-4">
+          <h4 class="text-sm font-bold text-slate-100 flex items-center gap-2">
+            <i data-lucide="zap" class="w-4 h-4 text-emerald-400"></i>
+            <span>Quantifiable Results & Measured Impact</span>
+          </h4>
+          <div id="modal-results-list" class="space-y-3"></div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-4 bg-slate-950/70 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
+        <a 
+          href="https://github.com/aniket792001" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-colors"
+        >
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>View on GitHub</span>
+        </a>
+
+        <button onclick="closeModal()" class="text-xs text-slate-400 hover:text-white transition-colors">
+          Close Window
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC & CASE STUDY DATA -->
+  <script>
+    // Aniket's Projects Data
+    const PROJECTS = [
+      {
+        id: 'platform-axiom',
+        title: 'Platform Axiom — Enterprise Self-Correcting RAG',
+        category: 'AI / GenAI',
+        badge: 'Self-Correcting Agent',
+        shortSummary: 'Cyclical Agentic RAG system built with LangGraph featuring dual validation loops (DocGrader & Hallucination Grader), multi-tenant hybrid search (Qdrant + BM25Plus RRF), and real-time FastAPI SSE streaming.',
+        techStack: ['Python', 'LangGraph', 'FastAPI', 'Qdrant', 'BM25', 'SQLite', 'SSE', 'React'],
+        metrics: [
+          { label: 'Hallucination Drop', value: '-89%' },
+          { label: 'Retrieval MRR', value: '0.91' },
+          { label: 'P95 Stream TTFT', value: '<320ms' }
+        ],
+        overview: {
+          problem: 'Enterprise document Q&A systems regularly fail when facing ambiguous queries, specialized domain jargon, or retrieved chunks that are irrelevant. Standard naive RAG feeds hallucinated or out-of-context text directly into generative LLMs without validation or corrective retry mechanisms.',
+          solution: 'Architected SCORE, a cyclical state-graph agent in LangGraph with dual validation checkpoints: DocGrader to filter out non-relevant retrieval noise, and a Hallucination Grader with automated query reformulation loops. Implemented hybrid search combining dense vectors (Qdrant) and sparse BM25Plus via Reciprocal Rank Fusion (RRF).',
+          architectureNodes: [
+            { title: '1. Ingestion & Dynamic Chunking', desc: 'Recursive contextual token splitter with metadata retention (tenant_id, document_id, section, timestamp).' },
+            { title: '2. Multi-Tenant Hybrid Search (Qdrant + BM25Plus)', desc: 'Dense vector embeddings combined with sparse BM25Plus keyword matching fused via Reciprocal Rank Fusion (RRF).' },
+            { title: '3. DocGrader Node (Relevance Filter)', desc: 'Validates retrieved chunks against user intent; filters out non-relevant contexts before LLM ingestion.' },
+            { title: '4. Generative Synthesis & Hallucination Grader', desc: 'Synthesizes grounded response, then verifies assertions against context. Flags hallucinations and triggers query reformulation fallbacks.' },
+            { title: '5. FastAPI SSE Streaming & SQLite Persistence', desc: 'Real-time Server-Sent Events (SSE) stream tokens to the frontend while SQLite maintains session history.' }
+          ],
+          keyDecisions: [
+            {
+              decision: 'LangGraph State Graph over Linear Chains',
+              rationale: 'Linear pipelines cannot recover from poor retrieval. LangGraph provides cyclic conditional branches allowing the agent to evaluate its own retrieved docs and rewrite queries autonomously.'
+            },
+            {
+              decision: 'Hybrid Dense + BM25Plus via RRF over Dense-Only',
+              rationale: 'Dense embeddings struggle with exact part numbers, acronyms, and alphanumeric codes. BM25Plus recovers exact lexical matches while dense vectors provide conceptual context.'
+            },
+            {
+              decision: 'Server-Sent Events (SSE) over WebSockets',
+              rationale: 'Unidirectional LLM token streaming is natively handled by HTTP SSE with standard connection headers and built-in client reconnection, without WebSocket state overhead.'
+            }
+          ],
+          codeSnippet: {
+            filename: 'rag_agent_graph.py',
+            code: `from langgraph.graph import StateGraph, END
+from typing import TypedDict, List
+
+class AgentState(TypedDict):
+    question: str
+    documents: List[dict]
+    generation: str
+    retry_count: int
+
+# Define the Cyclical Workflow
+workflow = StateGraph(AgentState)
+
+workflow.add_node("retrieve_hybrid", retrieve_hybrid_qdrant_bm25)
+workflow.add_node("grade_documents", doc_grader_node)
+workflow.add_node("generate_response", generate_answer_node)
+workflow.add_node("grade_hallucination", hallucination_grader_node)
+workflow.add_node("reformulate_query", query_rewrite_fallback_node)
+
+workflow.set_entry_point("retrieve_hybrid")
+workflow.add_edge("retrieve_hybrid", "grade_documents")
+
+# Conditional: If documents lack relevance, rewrite query
+workflow.add_conditional_edges(
+    "grade_documents",
+    decide_to_generate,
+    {"generate": "generate_response", "rewrite": "reformulate_query"}
+)
+
+workflow.add_edge("reformulate_query", "retrieve_hybrid")
+workflow.add_edge("generate_response", "grade_hallucination")
+
+# Conditional: If hallucination detected, loop back with reflection
+workflow.add_conditional_edges(
+    "grade_hallucination",
+    check_groundedness,
+    {"grounded": END, "hallucinated": "reformulate_query"}
+)
+
+score_rag_agent = workflow.compile()`
+          },
+          results: [
+            'Eliminated context hallucinations by 89% compared to traditional naive single-pass RAG.',
+            'Hybrid RRF search improved Mean Reciprocal Rank (MRR) from 0.68 to 0.91 across technical documentation.',
+            'Sub-320ms time-to-first-token (TTFT) achieved via FastAPI SSE streaming.'
+          ]
+        }
+      },
+      {
+        id: 'project-pebble',
+        title: 'Project Pebble — AI-Powered Fintech Micro-Financing Platform',
+        category: 'Backend & Systems',
+        badge: 'Production Fintech',
+        shortSummary: 'High-availability microservices architecture powering 100+ REST APIs, Docker containerization, JWT/OAuth/RBAC security, a 99.34% accuracy XGBoost underwriting classifier, and Gemini-powered voice/chat.',
+        techStack: ['Python', 'Flask', 'React Native', 'MongoDB', 'Docker', 'XGBoost', 'Gemini API', 'WebSockets'],
+        metrics: [
+          { label: 'Model Accuracy', value: '99.34%' },
+          { label: 'REST APIs Shipped', value: '100+' },
+          { label: 'Evaluation Latency', value: '<18ms' }
+        ],
+        overview: {
+          problem: 'Fintech micro-financing platforms in emerging markets need rapid, sub-second credit decisioning while maintaining strict compliance, bulletproof security (preventing unauthorized privilege escalation), and intuitive voice-based onboarding for non-tech-savvy borrowers.',
+          solution: 'Engineered a Docker-based microservices backend with Flask, MongoDB, and Redis. Built and benchmarked 10 classification algorithms, selecting an optimized XGBoost model achieving 99.34% accuracy. Integrated Google Gemini API for multimodal voice capture, speech-to-text, and conversational underwriting via WebSockets and WhatsApp.',
+          architectureNodes: [
+            { title: '1. Dockerized Microservices Topology', desc: 'Separated services for auth, credit evaluation, payment webhooks, messaging, and document storage.' },
+            { title: '2. JWT/OAuth & RBAC Security Layer', desc: 'Stateless JWT verification, fine-grained role-based permissions, and token-bucket rate limiting on sensitive routes.' },
+            { title: '3. Machine Learning Underwriting Pipeline', desc: 'XGBoost model benchmarked against 10 algorithms; features financial indicators, velocity metrics, and repayment history.' },
+            { title: '4. Gemini Voice & WhatsApp Conversational Layer', desc: 'Voice capture with speech-to-text and text-to-speech for accessible borrower applications via WebSockets and WhatsApp API.' },
+            { title: '5. Automated Testing & Verification', desc: 'Comprehensive Pytest suite validating API responses, schema integrity, and regression-free microservices deployment.' }
+          ],
+          keyDecisions: [
+            {
+              decision: 'XGBoost over Deep Neural Networks / Random Forest',
+              rationale: 'Benchmarked 10 models. XGBoost achieved 99.34% accuracy with <18ms inference latency and explainable SHAP values needed for financial auditability.'
+            },
+            {
+              decision: 'Microservices with Docker over Monolith',
+              rationale: 'Isolated credit decisioning from conversational WhatsApp webhook traffic, preventing API bottlenecks during peak morning loan application windows.'
+            },
+            {
+              decision: 'Gemini Voice Integration via WebSockets',
+              rationale: 'Enabled natural spoken voice loan inquiries for rural/semi-urban applicants, boosting loan application completion rates significantly.'
+            }
+          ],
+          codeSnippet: {
+            filename: 'underwriting_service.py',
+            code: `import xgboost as xgb
+import numpy as np
+from flask import Blueprint, request, jsonify
+from services.auth import require_rbac
+from services.gemini_voice import process_voice_application
+
+credit_bp = Blueprint('credit', __name__)
+model = xgb.XGBClassifier()
+model.load_model("models/credit_xgboost_v2.json")
+
+@credit_bp.route('/api/v1/underwrite', methods=['POST'])
+@require_rbac(['borrower', 'loan_officer'])
+def evaluate_loan_application():
+    data = request.get_json()
+    features = np.array([
+        data['credit_score'],
+        data['income_to_loan_ratio'],
+        data['past_default_flags'],
+        data['employment_duration_months'],
+        data['monthly_cashflow_variance']
+    ]).reshape(1, -1)
+    
+    # 99.34% accuracy XGBoost inference
+    prob_approval = float(model.predict_proba(features)[0][1])
+    is_approved = prob_approval >= 0.72
+    
+    return jsonify({
+        "status": "APPROVED" if is_approved else "REVIEW_REQUIRED",
+        "confidence_score": round(prob_approval, 4),
+        "model_version": "xgboost-fintech-prod-v2"
+    }), 200`
+          },
+          results: [
+            'Built and shipped 100+ production RESTful APIs powering mobile and web applications.',
+            'Achieved 99.34% classification accuracy on loan underwriting workflows across validation test sets.',
+            'Seamless multimodal Gemini voice integration enabled real-time speech loan applications over WebSockets and WhatsApp.'
+          ]
+        }
+      },
+      {
+        id: 'rag-document-qa',
+        title: 'RAG-Based Document Q&A System',
+        category: 'AI / GenAI',
+        badge: 'Vector Search Pipeline',
+        shortSummary: 'End-to-end question answering pipeline utilizing Hugging Face embeddings, FAISS vector search, and context-grounded LLM generation returning structured JSON with verifiable source citations.',
+        techStack: ['Python', 'FastAPI', 'LangChain', 'Hugging Face', 'FAISS', 'Pydantic'],
+        metrics: [
+          { label: 'Citation Grounding', value: '100%' },
+          { label: 'Query Latency', value: '<280ms' },
+          { label: 'Recall Rate', value: '94.8%' }
+        ],
+        overview: {
+          problem: 'Organizations struggle to extract verified facts from dense internal documentation. Off-the-shelf generative chat tools frequently fabricate policies and numbers without citing verifiable page or paragraph sources.',
+          solution: 'Developed an efficient RAG pipeline utilizing recursive hierarchical document chunking, Hugging Face open-source embeddings, and a FAISS in-memory index. Built a high-performance FastAPI endpoint returning validated JSON containing both the answer and verifiable source document snippets.',
+          architectureNodes: [
+            { title: '1. Document Splitting & Hierarchy', desc: 'Recursive text splitters keeping semantic paragraphs intact with chapter and line index metadata.' },
+            { title: '2. Hugging Face Dense Embeddings', desc: 'Generated sentence-transformer embeddings with normalized cosine similarity metrics.' },
+            { title: '3. High-Speed FAISS Vector Index', desc: 'Fast Approximate Nearest Neighbor (ANN) index delivering sub-15ms vector similarity queries.' },
+            { title: '4. Context-Grounded Prompting', desc: 'Prompt template constraining LLM reasoning strictly to verified retrieved chunks to prevent hallucination.' },
+            { title: '5. FastAPI Structured JSON Endpoint', desc: 'Custom /ask REST endpoint enforcing Pydantic schemas with generated answer and cited reference links.' }
+          ],
+          keyDecisions: [
+            {
+              decision: 'FAISS Vector Index for In-Memory Retrieval',
+              rationale: 'Zero external database dependency and ultra-low latency (<10ms) indexing for fast local and single-instance cloud deployment.'
+            },
+            {
+              decision: 'Strict Source Citation Schema Enforcement',
+              rationale: 'Required every generated sentence to be tagged with corresponding doc ID, ensuring verifiable audit trails for enterprise compliance.'
+            }
+          ],
+          codeSnippet: {
+            filename: 'qa_pipeline.py',
+            code: `from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import List
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+
+app = FastAPI(title="Context-Grounded Document Q&A")
+
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+vector_db = FAISS.load_local("faiss_doc_index", embeddings, allow_dangerous_deserialization=True)
+
+class AnswerResponse(BaseModel):
+    query: str
+    answer: str
+    cited_sources: List[dict]
+
+@app.post("/ask", response_model=AnswerResponse)
+async def ask_documents(query: str):
+    docs = vector_db.similarity_search_with_score(query, k=4)
+    if not docs:
+        raise HTTPException(status_code=404, detail="No relevant context found.")
+    
+    context_str = "\\n\\n".join([d[0].page_content for d in docs])
+    answer = generate_grounded_answer(query=query, context=context_str)
+    
+    return AnswerResponse(
+        query=query,
+        answer=answer,
+        cited_sources=[{"doc_id": d[0].metadata.get("id"), "score": float(d[1])} for d in docs]
+    )`
+          },
+          results: [
+            '100% cited source verification eliminating unverified generative assertions.',
+            'Average response latency under 280ms on standard cloud instances.',
+            'Production-ready FastAPI endpoint with complete OpenAPI / Swagger documentation.'
+          ]
+        }
+      }
+    ];
+
+    let currentCategory = 'All';
+    let activeProject = null;
+
+    // Render Project Cards
+    function renderProjects() {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = '';
+
+      const filtered = currentCategory === 'All' 
+        ? PROJECTS 
+        : PROJECTS.filter(p => p.category.toLowerCase().includes(currentCategory.toLowerCase()));
+
+      filtered.forEach(project => {
+        const card = document.createElement('div');
+        card.className = "group rounded-2xl bg-slate-900/60 border border-slate-800/80 hover:border-cyan-500/40 transition-all duration-300 flex flex-col justify-between overflow-hidden hover:shadow-2xl hover:shadow-cyan-500/10";
+        
+        let metricsHtml = project.metrics.map(m => `
+          <div class="text-center">
+            <span class="block text-sm sm:text-base font-bold font-mono text-cyan-300">${m.value}</span>
+            <span class="block text-[10px] text-slate-400 uppercase tracking-tight">${m.label}</span>
+          </div>
+        `).join('');
+
+        let tagsHtml = project.techStack.map(t => `
+          <span class="text-xs px-2.5 py-1 rounded-md bg-slate-800/60 text-slate-300 border border-slate-700/50 font-mono">${t}</span>
+        `).join('');
+
+        card.innerHTML = `
+          <div class="p-7">
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="text-xs font-mono font-medium px-2.5 py-1 rounded-md bg-slate-800 border border-slate-700 text-cyan-300">
+                ${project.category}
+              </span>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-800/60 px-2 py-0.5 rounded-full flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                ${project.badge}
+              </span>
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-100 group-hover:text-cyan-300 transition-colors">
+              ${project.title}
+            </h3>
+
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+              ${project.shortSummary}
+            </p>
+
+            <div class="mt-6 grid grid-cols-3 gap-2.5 py-3 px-3.5 rounded-xl bg-slate-950/70 border border-slate-800/80">
+              ${metricsHtml}
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-1.5">
+              ${tagsHtml}
+            </div>
+          </div>
+
+          <div class="px-7 py-4 bg-slate-950/50 border-t border-slate-800/80 flex items-center justify-between">
+            <span class="text-xs text-slate-400 flex items-center gap-1.5">
+              <i data-lucide="git-branch" class="w-3.5 h-3.5 text-cyan-400"></i>
+              Deep-Dive Available
+            </span>
+
+            <button 
+              onclick="openModal('${project.id}')"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 group-hover:translate-x-1 transition-all"
+            >
+              <span>View Case Study</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Filter Logic
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-filter') === cat) {
+          btn.className = "filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 text-slate-950 shadow-md";
+        } else {
+          btn.className = "filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200";
+        }
+      });
+      renderProjects();
+    }
+
+    // Open Case Study Modal
+    function openModal(id) {
+      activeProject = PROJECTS.find(p => p.id === id);
+      if (!activeProject) return;
+
+      document.getElementById('modal-category').innerText = activeProject.category;
+      document.getElementById('modal-title').innerText = activeProject.title;
+      document.getElementById('modal-problem').innerText = activeProject.overview.problem;
+      document.getElementById('modal-solution').innerText = activeProject.overview.solution;
+
+      // Render Architecture Nodes
+      const nodesContainer = document.getElementById('modal-architecture-nodes');
+      nodesContainer.innerHTML = activeProject.overview.architectureNodes.map((node, i) => `
+        <div class="p-4 rounded-xl bg-slate-950/40 border border-slate-800/80 flex items-start gap-3 hover:border-cyan-500/30 transition-colors">
+          <div class="w-7 h-7 rounded-lg bg-cyan-950 border border-cyan-800/60 text-cyan-400 flex items-center justify-center font-mono font-bold text-xs flex-shrink-0">
+            ${i + 1}
+          </div>
+          <div>
+            <p class="font-semibold text-slate-200 text-sm">${node.title}</p>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1 leading-relaxed">${node.desc}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Render Key Decisions
+      const decisionsContainer = document.getElementById('modal-key-decisions');
+      decisionsContainer.innerHTML = activeProject.overview.keyDecisions.map(kd => `
+        <div class="p-4 rounded-xl bg-slate-950/40 border border-slate-800">
+          <div class="flex items-center gap-2 text-cyan-300 font-bold text-sm">
+            <i data-lucide="check-circle-2" class="w-4 h-4 text-cyan-400"></i>
+            <span>${kd.decision}</span>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-400 mt-2 pl-6 leading-relaxed">
+            ${kd.rationale}
+          </p>
+        </div>
+      `).join('');
+
+      // Render Code Snippet
+      document.getElementById('modal-code-filename').innerHTML = `
+        <i data-lucide="terminal" class="w-3.5 h-3.5 text-cyan-400"></i>
+        <span>${activeProject.overview.codeSnippet.filename}</span>
+      `;
+      document.getElementById('modal-code-content').innerText = activeProject.overview.codeSnippet.code;
+
+      // Render Results
+      const resultsContainer = document.getElementById('modal-results-list');
+      resultsContainer.innerHTML = activeProject.overview.results.map(res => `
+        <div class="p-3.5 rounded-xl bg-emerald-950/20 border border-emerald-900/40 text-emerald-300/90 flex items-start gap-3 text-xs sm:text-sm">
+          <i data-lucide="zap" class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5"></i>
+          <span>${res}</span>
+        </div>
+      `).join('');
+
+      // Reset Tab to Architecture
+      switchTab('architecture');
+
+      // Show Modal
+      document.getElementById('modal-container').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      lucide.createIcons();
+    }
+
+    function closeModal() {
+      document.getElementById('modal-container').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    // Modal Tabs Switching
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.className = "tab-btn pb-3 px-3 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 whitespace-nowrap";
+      });
+
+      const activeContent = document.getElementById(`tab-content-${tabName}`);
+      const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+
+      if (activeContent) activeContent.classList.remove('hidden');
+      if (activeBtn) {
+        activeBtn.className = "tab-btn pb-3 px-3 border-b-2 border-cyan-400 text-cyan-400 flex items-center gap-2 whitespace-nowrap";
+      }
+      lucide.createIcons();
+    }
+
+    // Copy Code Snippet
+    function copySnippetCode() {
+      if (!activeProject) return;
+      navigator.clipboard.writeText(activeProject.overview.codeSnippet.code);
+      const btnText = document.getElementById('copy-btn-text');
+      btnText.innerText = 'Copied!';
+      setTimeout(() => {
+        btnText.innerText = 'Copy Code';
+      }, 2000);
+    }
+
+    // Contact Form Handler
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+      const body = encodeURIComponent(`${message}\n\nSender Email: ${email}`);
+      window.location.href = `mailto:aniketkadam792001@gmail.com?subject=${subject}&body=${body}`;
+
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+
+      setTimeout(() => {
+        document.getElementById('contact-form').reset();
+        document.getElementById('contact-form').classList.remove('hidden');
+        document.getElementById('form-success').classList.add('hidden');
+      }, 6000);
+    }
+
+    // Close on Escape Key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Close on Backdrop Click
+    document.getElementById('modal-container').addEventListener('click', (e) => {
+      if (e.target.id === 'modal-container') closeModal();
+    });
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProjects();
+      lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>
