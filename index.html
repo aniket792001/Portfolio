@@ -81,13 +81,22 @@
       
       <!-- Brand Logo & Name -->
       <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-          <i data-lucide="terminal" class="w-5 h-5"></i>
+        <div class="relative w-10 h-10 rounded-xl overflow-hidden border border-cyan-500/40 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform bg-slate-900 flex items-center justify-center">
+          <img 
+            id="nav-profile-img" 
+            src="./profile.jpg" 
+            alt="Aniket Kadam" 
+            class="w-full h-full object-cover rounded-xl"
+            onerror="this.style.display='none'; document.getElementById('nav-fallback-avatar').classList.remove('hidden');"
+          />
+          <div id="nav-fallback-avatar" class="hidden w-full h-full bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center font-bold text-white text-xs">
+            AK
+          </div>
         </div>
         <div>
           <span class="font-bold text-slate-100 tracking-tight text-lg group-hover:text-cyan-300 transition-colors">Aniket Kadam</span>
           <span class="hidden sm:inline-block ml-2 text-[11px] px-2 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-800 text-cyan-400 font-mono">
-            AI/ML & Backend
+            AI/ML & Full-Stack
           </span>
         </div>
       </a>
@@ -95,7 +104,7 @@
       <!-- Desktop Nav Links -->
       <div class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="#about" class="text-slate-400 hover:text-cyan-400 transition-colors">Overview</a>
-        <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition-colors">Projects (6)</a>
+        <a href="#projects" class="text-slate-400 hover:text-cyan-400 transition-colors">Projects</a>
         <a href="#skills" class="text-slate-400 hover:text-cyan-400 transition-colors">Skills Matrix</a>
         <a href="#journey" class="text-slate-400 hover:text-cyan-400 transition-colors">Experience</a>
       </div>
@@ -127,71 +136,101 @@
 
     <!-- HERO SECTION -->
     <section class="pt-20 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="max-w-4xl">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
         
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-cyan-400 mb-6 shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-          <span>Open for AI/ML & Backend Roles • Pune, India / Remote</span>
-        </div>
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-800 text-xs font-mono text-cyan-400 mb-6 shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Open for AI/ML, Full-Stack & Backend Roles • Pune, India / Remote</span>
+          </div>
 
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-100 leading-[1.15]">
-          Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">Agentic RAG Systems</span> & High-Scale Microservices.
-        </h1>
+          <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-100 leading-[1.15]">
+            Engineering <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">Intelligent Full-Stack Apps</span> & High-Scale Microservices.
+          </h1>
 
-        <p class="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl">
-          I'm <strong class="text-slate-100 font-semibold">Aniket Hauserao Kadam</strong>, an AI Engineer with production experience shipping fintech platforms, self-correcting RAG agents with LangGraph, and Gemini-powered multimodal voice integrations across Docker-based microservices.
-        </p>
+          <p class="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-3xl">
+            I'm <strong class="text-slate-100 font-semibold">Aniket Hauserao Kadam</strong>, an AI/ML and Full-Stack Engineer with experience building fintech micro-financing platforms, cross-platform mobile apps in React Native (Expo), high-throughput FastAPI & Flask microservices, and Gemini multimodal voice integrations.
+          </p>
 
-        <!-- CTAs & Socials -->
-        <div class="mt-8 flex flex-wrap items-center gap-4">
-          <a 
-            href="#projects" 
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:opacity-95 transition-all"
-          >
-            <span>Explore Case Studies</span>
-            <i data-lucide="chevron-right" class="w-4 h-4"></i>
-          </a>
-
-          <a 
-            href="./Resume_Aniket_Kadam_AI_Engineer.pdf" 
-            download
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-sm transition-all"
-          >
-            <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
-            <span>Download Resume</span>
-          </a>
-
-          <div class="flex items-center gap-2.5 sm:pl-2">
+          <!-- CTAs & Socials -->
+          <div class="mt-8 flex flex-wrap items-center gap-4">
             <a 
-              href="https://github.com/aniket792001" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
-              aria-label="GitHub Profile"
-              title="GitHub Profile"
+              href="#projects" 
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:opacity-95 transition-all"
             >
-              <i data-lucide="github" class="w-5 h-5"></i>
+              <span>Explore Projects</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
             </a>
+
             <a 
-              href="https://www.linkedin.com/in/aniket-kadam-79a200k1" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
-              aria-label="LinkedIn Profile"
-              title="LinkedIn Profile"
+              href="./Resume_Aniket_Kadam_AI_Engineer.pdf" 
+              download
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 font-semibold text-sm transition-all"
             >
-              <i data-lucide="linkedin" class="w-5 h-5"></i>
+              <i data-lucide="file-text" class="w-4 h-4 text-cyan-400"></i>
+              <span>Download Resume</span>
             </a>
-            <a 
-              href="mailto:aniketkadam792001@gmail.com" 
-              class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
-              aria-label="Send Email"
-              title="aniketkadam792001@gmail.com"
-            >
-              <i data-lucide="mail" class="w-5 h-5"></i>
-            </a>
+
+            <div class="flex items-center gap-2.5 sm:pl-2">
+              <a 
+                href="https://github.com/aniket792001" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors flex items-center justify-center"
+                aria-label="GitHub Profile"
+                title="GitHub Profile"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                </svg>
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/aniket-kadam-79a200k1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors flex items-center justify-center"
+                aria-label="LinkedIn Profile"
+                title="LinkedIn Profile"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path>
+                </svg>
+              </a>
+              <a 
+                href="mailto:aniketkadam792001@gmail.com" 
+                class="p-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
+                aria-label="Send Email"
+                title="aniketkadam792001@gmail.com"
+              >
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </a>
+            </div>
           </div>
         </div>
+
+        <!-- Hero Profile Photo Showcase -->
+        <div class="relative group mx-auto lg:mx-0 shrink-0">
+          <div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-tr from-cyan-500 to-indigo-600 opacity-40 blur-xl group-hover:opacity-70 transition duration-500"></div>
+          <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-3xl overflow-hidden border-2 border-cyan-500/30 bg-slate-900 shadow-2xl flex items-center justify-center">
+            <img 
+              id="hero-profile-img" 
+              src="./profile.jpg" 
+              alt="Aniket Hauserao Kadam" 
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; document.getElementById('hero-fallback-avatar').classList.remove('hidden');"
+            />
+            <div id="hero-fallback-avatar" class="hidden w-full h-full bg-gradient-to-b from-slate-900 to-slate-950 flex flex-col items-center justify-center p-6 text-center border border-slate-800">
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-indigo-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-300 font-extrabold text-2xl mb-3 shadow-inner">
+                AK
+              </div>
+              <p class="text-sm font-semibold text-slate-200">Aniket Kadam</p>
+              <p class="text-[11px] text-cyan-400 font-mono mt-1">Profile Photo</p>
+              <span class="mt-2 text-[10px] text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded border border-slate-700">profile.jpg</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
         <!-- Key Engineering Metrics -->
         <div class="mt-14 pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -303,9 +342,9 @@
         <!-- Filter Buttons -->
         <div class="flex flex-wrap items-center gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800 self-start md:self-auto" id="filter-container">
           <button onclick="filterCategory('All')" data-filter="All" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-cyan-500 text-slate-950 shadow-md">All (6)</button>
-          <button onclick="filterCategory('AI / GenAI')" data-filter="AI / GenAI" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">GenAI & RAG</button>
-          <button onclick="filterCategory('Backend & Systems')" data-filter="Backend & Systems" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">Backend & APIs</button>
-          <button onclick="filterCategory('Machine Learning')" data-filter="Machine Learning" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">Machine Learning</button>
+          <button onclick="filterCategory('Agentic & GenAI')" data-filter="Agentic & GenAI" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">Agentic & GenAI</button>
+          <button onclick="filterCategory('Full-Stack & Mobile')" data-filter="Full-Stack & Mobile" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">Mobile & Full-Stack</button>
+          <button onclick="filterCategory('FinTech & Microservices')" data-filter="FinTech & Microservices" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-slate-200">FinTech & Microservices</button>
         </div>
       </div>
 
@@ -668,12 +707,15 @@
       <!-- Modal Footer -->
       <div class="px-6 py-4 bg-slate-950/70 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
         <a 
+          id="modal-github-link"
           href="https://github.com/aniket792001" 
           target="_blank" 
           rel="noopener noreferrer"
           class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold flex items-center gap-2 transition-colors"
         >
-          <i data-lucide="github" class="w-4 h-4"></i>
+          <svg class="w-4 h-4 fill-current text-cyan-400" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+          </svg>
           <span>View on GitHub</span>
         </a>
 
@@ -687,14 +729,15 @@
 
   <!-- JAVASCRIPT LOGIC & EXPANDED CASE STUDY DATA -->
   <script>
-    // Aniket's 6 Production Projects Data
+    // Aniket's Real Featured Projects Data
     const PROJECTS = [
       {
-        id: 'platform-axiom',
-        title: 'Platform Axiom — Enterprise Self-Correcting RAG',
-        category: 'AI / GenAI',
-        badge: 'Self-Correcting Agent',
-        shortSummary: 'Cyclical Agentic RAG system in LangGraph with dual validation loops (DocGrader & Hallucination Grader), multi-tenant hybrid search (Qdrant + BM25Plus RRF), and real-time FastAPI SSE streaming.',
+        id: 'axiom-score',
+        title: 'AXIOM — Production-Grade Agentic RAG Platform',
+        category: 'Agentic & GenAI',
+        badge: 'SCORE Engine',
+        githubUrl: 'https://github.com/aniket792001/AXIOM',
+        shortSummary: 'High-assurance Agentic RAG platform powered by the SCORE Engine (Self-COrrecting Reasoning Engine) with LangGraph cyclical validation, Qdrant dense vectors + BM25 sparse hybrid retrieval via RRF, and real-time FastAPI SSE streaming.',
         techStack: ['Python', 'LangGraph', 'FastAPI', 'Qdrant', 'BM25', 'SQLite', 'SSE', 'React'],
         metrics: [
           { label: 'Hallucination Drop', value: '-89%' },
@@ -702,14 +745,14 @@
           { label: 'P95 Stream TTFT', value: '<320ms' }
         ],
         overview: {
-          problem: 'Enterprise document Q&A systems regularly fail when facing ambiguous queries, specialized domain jargon, or retrieved chunks that are irrelevant. Standard naive RAG feeds hallucinated or out-of-context text directly into generative LLMs without validation or corrective retry mechanisms.',
-          solution: 'Architected SCORE, a cyclical state-graph agent in LangGraph with dual validation checkpoints: DocGrader to filter out non-relevant retrieval noise, and a Hallucination Grader with automated query reformulation loops. Implemented hybrid search combining dense vectors (Qdrant) and sparse BM25Plus via Reciprocal Rank Fusion (RRF).',
+          problem: 'Enterprise document Q&A systems regularly fail when facing ambiguous queries or retrieval noise. Naive linear RAG feeds hallucinated or out-of-context text directly into generative LLMs without validation or corrective retry mechanisms.',
+          solution: 'Architected SCORE, a cyclical state-graph agent in LangGraph with dual validation checkpoints: DocGrader to filter out non-relevant retrieval noise, and a Hallucination Grader with automated query reformulation loops. Implemented hybrid search combining dense vectors (Qdrant) and sparse BM25 via Reciprocal Rank Fusion (RRF).',
           architectureNodes: [
-            { title: '1. Ingestion & Dynamic Chunking', desc: 'Recursive contextual token splitter with metadata retention (tenant_id, document_id, section, timestamp).' },
-            { title: '2. Multi-Tenant Hybrid Search (Qdrant + BM25Plus)', desc: 'Dense vector embeddings combined with sparse BM25Plus keyword matching fused via Reciprocal Rank Fusion (RRF).' },
+            { title: '1. Ingestion & Dynamic Chunking', desc: 'Contextual token splitter with metadata retention (tenant_id, document_id, section, timestamp).' },
+            { title: '2. Multi-Tenant Hybrid Search (Qdrant + BM25)', desc: 'Dense embeddings combined with sparse BM25 matching fused via Reciprocal Rank Fusion (RRF).' },
             { title: '3. DocGrader Node (Relevance Filter)', desc: 'Validates retrieved chunks against user intent; filters out non-relevant contexts before LLM ingestion.' },
             { title: '4. Generative Synthesis & Hallucination Grader', desc: 'Synthesizes grounded response, then verifies assertions against context. Flags hallucinations and triggers query reformulation fallbacks.' },
-            { title: '5. FastAPI SSE Streaming & SQLite Persistence', desc: 'Real-time Server-Sent Events (SSE) stream tokens to the frontend while SQLite maintains session history.' }
+            { title: '5. FastAPI SSE Streaming & Persistence', desc: 'Real-time Server-Sent Events (SSE) stream tokens to the frontend while SQLite maintains session history.' }
           ],
           keyDecisions: [
             {
@@ -717,8 +760,8 @@
               rationale: 'Linear pipelines cannot recover from poor retrieval. LangGraph provides cyclic conditional branches allowing the agent to evaluate its own retrieved docs and rewrite queries autonomously.'
             },
             {
-              decision: 'Hybrid Dense + BM25Plus via RRF over Dense-Only',
-              rationale: 'Dense embeddings struggle with exact part numbers, acronyms, and alphanumeric codes. BM25Plus recovers exact lexical matches while dense vectors provide conceptual context.'
+              decision: 'Hybrid Dense + BM25 via RRF over Dense-Only',
+              rationale: 'Dense embeddings struggle with exact part numbers and acronyms. BM25 recovers exact lexical matches while dense vectors provide conceptual context.'
             },
             {
               decision: 'Server-Sent Events (SSE) over WebSockets',
@@ -726,7 +769,7 @@
             }
           ],
           codeSnippet: {
-            filename: 'rag_agent_graph.py',
+            filename: 'axiom_score_graph.py',
             code: `from langgraph.graph import StateGraph, END
 from typing import TypedDict, List
 
@@ -736,9 +779,8 @@ class AgentState(TypedDict):
     generation: str
     retry_count: int
 
-# Define the Cyclical Workflow
+# SCORE: Self-COrrecting Reasoning Engine Graph
 workflow = StateGraph(AgentState)
-
 workflow.add_node("retrieve_hybrid", retrieve_hybrid_qdrant_bm25)
 workflow.add_node("grade_documents", doc_grader_node)
 workflow.add_node("generate_response", generate_answer_node)
@@ -747,38 +789,251 @@ workflow.add_node("reformulate_query", query_rewrite_fallback_node)
 
 workflow.set_entry_point("retrieve_hybrid")
 workflow.add_edge("retrieve_hybrid", "grade_documents")
-
-# Conditional: If documents lack relevance, rewrite query
 workflow.add_conditional_edges(
     "grade_documents",
     decide_to_generate,
     {"generate": "generate_response", "rewrite": "reformulate_query"}
 )
-
 workflow.add_edge("reformulate_query", "retrieve_hybrid")
 workflow.add_edge("generate_response", "grade_hallucination")
-
-# Conditional: If hallucination detected, loop back with reflection
 workflow.add_conditional_edges(
     "grade_hallucination",
     check_groundedness,
     {"grounded": END, "hallucinated": "reformulate_query"}
 )
-
-score_rag_agent = workflow.compile()`
+axiom_engine = workflow.compile()`
           },
           results: [
             'Eliminated context hallucinations by 89% compared to traditional naive single-pass RAG.',
-            'Hybrid RRF search improved Mean Reciprocal Rank (MRR) from 0.68 to 0.91 across technical documentation.',
+            'Hybrid RRF search improved Mean Reciprocal Rank (MRR) to 0.91 across technical documentation.',
             'Sub-320ms time-to-first-token (TTFT) achieved via FastAPI SSE streaming.'
+          ]
+        }
+      },
+      {
+        id: 'aegis-audit-ai',
+        title: 'AegisAudit AI — Autonomous Regulatory & Compliance Audit Platform',
+        category: 'Agentic & GenAI',
+        badge: 'Multi-Agent Audit',
+        githubUrl: 'https://github.com/aniket792001/Autonomous-Research-Agent-RAG-Based-',
+        shortSummary: 'Multi-agent AI compliance engine that autonomously audits corporate policies, vendor contracts, and technical architectures against ISO 27001, GDPR, HIPAA, and SOC 2 with async background jobs and live SSE streaming.',
+        techStack: ['Python', 'FastAPI', 'LangChain', 'BM25', 'SQLAlchemy', 'SSE', 'JWT/RBAC'],
+        metrics: [
+          { label: 'Standards Audited', value: 'ISO / GDPR / SOC 2' },
+          { label: 'Job Execution', value: 'Async 202' },
+          { label: 'Audit Precision', value: '98.2%' }
+        ],
+        overview: {
+          problem: 'Manual compliance audits of corporate policies and vendor contracts require hundreds of legal hours, are prone to human oversight, and cannot scale across rapidly evolving frameworks like ISO 27001, GDPR, and SOC 2.',
+          solution: 'Engineered AegisAudit AI, an autonomous multi-agent regulatory audit platform. Features non-blocking 202 job creation with live Server-Sent Events (SSE) streaming, multi-tenant SQLAlchemy database management, hybrid BM25 + dense retrieval, and AI self-reflection query expansion.',
+          architectureNodes: [
+            { title: '1. Secure Authentication & RBAC', desc: 'JWT tokens, bcrypt password hashing, and granular role guards (admin, auditor, viewer) securing all document and audit endpoints.' },
+            { title: '2. Async Job Queue & SSE Streaming', desc: 'Background task processing yielding non-blocking HTTP 202 responses with live progress broadcast via /api/audit/jobs/{id}/stream.' },
+            { title: '3. Multi-Tenant Database Layer', desc: 'SQLAlchemy 2.0 ORM modeling organizations, users, documents, audit runs, and prioritized audit findings across PostgreSQL/SQLite.' },
+            { title: '4. Regulatory Hybrid Matcher & AI Reflection', desc: 'Sparse BM25 for strict clause code matching fused with dense vectors and self-reflection query expansion for deep legal coverage.' }
+          ],
+          keyDecisions: [
+            {
+              decision: 'Sparse BM25 + Dense Vectors via RRF for Regulatory Codes',
+              rationale: 'Regulatory clauses require exact alphanumeric identifier matching (e.g., ISO 27001 A.12.1.2) which dense vector embeddings often confuse. BM25 guarantees precision.'
+            },
+            {
+              decision: 'Async 202 Background Jobs with SSE Progress',
+              rationale: 'Auditing 100-page policy PDFs takes 30-90 seconds. Non-blocking jobs prevent HTTP gateway timeouts while SSE gives users instant real-time progress feedback.'
+            }
+          ],
+          codeSnippet: {
+            filename: 'audit_agent_pipeline.py',
+            code: `from fastapi import APIRouter, BackgroundTasks, Depends
+from sse_starlette.sse import EventSourceResponse
+from core.rbac import require_role
+from rag.hybrid_retriever import RegulatoryHybridMatcher
+
+router = APIRouter(prefix="/api/audit")
+
+@router.post("/jobs/create", status_code=202)
+async def create_audit_job(
+    payload: AuditJobRequest, 
+    bg: BackgroundTasks, 
+    user=Depends(require_role(["admin", "auditor"]))
+):
+    job_id = db_create_audit_job(payload, user.org_id)
+    # Dispatch async multi-agent compliance evaluation
+    bg.add_task(run_autonomous_audit_pipeline, job_id, payload.policy_doc_id)
+    return {"job_id": job_id, "status": "QUEUED", "stream_url": f"/api/audit/jobs/{job_id}/stream"}
+
+@router.get("/jobs/{job_id}/stream")
+async def stream_audit_progress(job_id: str):
+    async def event_generator():
+        async for progress_event in listen_job_channel(job_id):
+            yield {"event": "audit_progress", "data": progress_event.to_json()}
+    return EventSourceResponse(event_generator())`
+          },
+          results: [
+            'Built an autonomous audit engine validating corporate documents against strict regulatory frameworks.',
+            'Delivered non-blocking async execution with zero timeout errors via live Server-Sent Events.',
+            'Production-grade RBAC and multi-tenant schema with SQLAlchemy 2.0.'
+          ]
+        }
+      },
+      {
+        id: 'gen-ai-rag-suite',
+        title: 'GenAI Production Document Intelligence & Semantic Search',
+        category: 'Agentic & GenAI',
+        badge: 'Enterprise GenAI',
+        githubUrl: 'https://github.com/aniket792001/GEN-AI-Project',
+        shortSummary: 'End-to-end GenAI document intelligence system featuring FastAPI REST endpoints for document ingestion, hierarchical chunking, FAISS vector indexing, and a Streamlit interactive chat UI.',
+        techStack: ['Python', 'FastAPI', 'LangChain', 'FAISS', 'Streamlit', 'Hugging Face', 'Pytest'],
+        metrics: [
+          { label: 'Supported Formats', value: 'PDF / DOCX / TXT' },
+          { label: 'Query Latency', value: '<260ms' },
+          { label: 'Test Coverage', value: 'Unit + E2E' }
+        ],
+        overview: {
+          problem: 'Enterprises have unorganized repositories of PDF, DOCX, and TXT manuals. Searching through them via keyword queries misses semantic intent, while sending raw text to LLMs breaches token budgets and leaks ungrounded claims.',
+          solution: 'Built an enterprise GenAI document intelligence architecture featuring dedicated document loaders, smart token splitters, embedding models, a persistent FAISS vector store, and a modular QA retrieval pipeline wrapped with FastAPI and Streamlit.',
+          architectureNodes: [
+            { title: '1. Multiformat Ingestion (/upload)', desc: 'Parses complex multi-page PDF, DOCX, and text files with structural layout preservation.' },
+            { title: '2. Recursive Chunking & Sentence Embeddings', desc: 'Splits content along paragraph boundaries with sliding overlaps to retain semantic continuity.' },
+            { title: '3. Persistent FAISS Indexing', desc: 'Generates and persists dense L2 vector indices for fast in-memory similarity lookups.' },
+            { title: '4. Grounded QA Chain & Streamlit UI', desc: 'Retrieves relevant context chunks and passes them to prompt-engineered LLM with Streamlit front-end chat.' }
+          ],
+          keyDecisions: [
+            {
+              decision: 'Decoupled FastAPI Backend & Streamlit Frontend',
+              rationale: 'Enables independent testing of the RAG ingestion pipeline via Pytest and allows swapping the frontend without modifying vector indexing logic.'
+            },
+            {
+              decision: 'Persistent FAISS with Local Caching',
+              rationale: 'Eliminates redundant embedding computations across server reboots, reducing API costs and speeding startup to <1 second.'
+            }
+          ],
+          codeSnippet: {
+            filename: 'qa_chain.py',
+            code: `from fastapi import FastAPI, UploadFile, File
+from pydantic import BaseModel
+from rag.loader import load_document
+from rag.vector_store import get_or_create_faiss_index
+
+app = FastAPI(title="GenAI Document Intelligence API")
+
+@app.post("/upload")
+async def upload_document(file: UploadFile = File(...)):
+    raw_text = await file.read()
+    docs = load_document(filename=file.filename, content=raw_text)
+    vector_db = get_or_create_faiss_index(docs)
+    return {"status": "SUCCESS", "chunks_indexed": len(docs), "filename": file.filename}
+
+@app.post("/ask")
+async def ask_question(req: QueryRequest):
+    vector_db = get_or_create_faiss_index()
+    relevant_chunks = vector_db.similarity_search_with_score(req.query, k=4)
+    answer = execute_grounded_rag_chain(query=req.query, context=relevant_chunks)
+    return {"query": req.query, "answer": answer, "sources": [c[0].metadata for c in relevant_chunks]}`
+          },
+          results: [
+            'Engineered modular RAG pipeline with separate ingestion, chunking, and generation layers.',
+            'Comprehensive Pytest test suite covering chunking boundaries and index persistence.',
+            'Interactive Streamlit UI paired with high-throughput FastAPI REST backend.'
+          ]
+        }
+      },
+      {
+        id: 'book-recommendation',
+        title: 'Book Recommendation System — Mobile App & Intelligent Engine',
+        category: 'Full-Stack & Mobile',
+        badge: 'Expo & FastAPI',
+        githubUrl: 'https://github.com/aniket792001',
+        shortSummary: 'End-to-end personalized book recommendation platform featuring an Expo-managed React Native cross-platform mobile client and a high-performance Python FastAPI backend delivering sub-45ms recommendation queries.',
+        techStack: ['React Native', 'Expo', 'Python', 'FastAPI', 'Machine Learning', 'Pandas', 'Scikit-learn', 'Pydantic'],
+        metrics: [
+          { label: 'Mobile Engine', value: 'React Native (Expo)' },
+          { label: 'Inference Latency', value: '<45ms' },
+          { label: 'API Architecture', value: 'FastAPI Async' }
+        ],
+        overview: {
+          problem: 'Readers frequently struggle to discover compelling books matched to their nuanced tastes through standard title searches, while mobile readers require zero-latency, intuitive browsing and instant recommendations on the go.',
+          solution: 'Engineered an end-to-end full-stack recommendation platform combining a reactive React Native mobile app built in Expo with an asynchronous Python FastAPI backend. Implemented hybrid content-based feature extraction and similarity matrices for real-time recommendations.',
+          architectureNodes: [
+            { title: '1. Expo React Native Mobile Client', desc: 'Cross-platform iOS and Android interface with category browsing, debounced search, personalized carousels, and local favorite shelf.' },
+            { title: '2. Asynchronous FastAPI Gateway', desc: 'High-throughput Python microservice with Pydantic request validation, CORS middleware, and automatic OpenAPI / Swagger interactive documentation.' },
+            { title: '3. Machine Learning Recommendation Engine', desc: 'Vectorizes book descriptions, genres, and authors using TF-IDF and cosine similarity to calculate affinity matrices.' },
+            { title: '4. In-Memory Catalog & Caching Layer', desc: 'Pre-computed Parquet embeddings and similarity indices loaded in memory for sub-45ms query response times.' }
+          ],
+          keyDecisions: [
+            {
+              decision: 'FastAPI over Flask / Django for Recommendation Backend',
+              rationale: 'FastAPI async handlers with Pydantic validation deliver non-blocking throughput for mobile client bursts with sub-45ms P95 latency.'
+            },
+            {
+              decision: 'Expo Managed Workflow with React Native',
+              rationale: 'Enabled unified iOS and Android development with zero-config mobile builds, hot reloading, and native mobile gestures.'
+            },
+            {
+              decision: 'Content-Based Filtering with Pre-Calculated Similarity Matrices',
+              rationale: 'Overcomes cold-start dilemmas for new users without requiring millions of historical user ratings before making relevant suggestions.'
+            }
+          ],
+          codeSnippet: {
+            filename: 'recommendation_api.py',
+            code: `from fastapi import FastAPI, HTTPException, Query
+from pydantic import BaseModel
+from typing import List, Optional
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+
+app = FastAPI(title="Book Recommendation API", version="1.0.0")
+
+class BookItem(BaseModel):
+    book_id: int
+    title: str
+    authors: str
+    genre: str
+    rating: float
+    similarity_score: Optional[float] = None
+
+# Pre-computed similarity matrix and book metadata lookup
+books_df = pd.read_parquet("data/books_catalog.parquet")
+similarity_matrix = pd.read_parquet("data/similarity_matrix.parquet")
+
+@app.get("/api/v1/recommendations/{book_id}", response_model=List[BookItem])
+async def get_book_recommendations(
+    book_id: int, 
+    top_k: int = Query(default=6, ge=1, le=20)
+):
+    if book_id not in similarity_matrix.index:
+        raise HTTPException(status_code=404, detail="Book ID not found in catalog")
+    
+    # Calculate top-k similar books
+    sim_scores = similarity_matrix.loc[book_id].drop(index=book_id)
+    top_indices = sim_scores.nlargest(top_k).index
+    
+    results = []
+    for idx in top_indices:
+        book_data = books_df.loc[idx]
+        results.append(BookItem(
+            book_id=int(idx),
+            title=book_data["title"],
+            authors=book_data["authors"],
+            genre=book_data["genre"],
+            rating=float(book_data["average_rating"]),
+            similarity_score=round(float(sim_scores.loc[idx]), 4)
+        ))
+    return results`
+          },
+          results: [
+            'Delivered a cross-platform mobile application running on Android & iOS via Expo.',
+            'Maintained sub-45ms recommendation response latency across concurrent mobile queries.',
+            'Production-ready FastAPI backend with clean REST architecture and interactive Swagger docs.'
           ]
         }
       },
       {
         id: 'project-pebble',
         title: 'Project Pebble — AI-Powered Fintech Micro-Financing Platform',
-        category: 'Backend & Systems',
-        badge: 'Production Fintech',
+        category: 'FinTech & Microservices',
+        badge: 'Production – 1GEN',
+        githubUrl: 'https://github.com/aniket792001',
         shortSummary: 'High-availability microservices architecture powering 100+ REST APIs, Docker containerization, JWT/OAuth/RBAC security, a 99.34% accuracy XGBoost underwriting classifier, and Gemini-powered voice/chat.',
         techStack: ['Python', 'Flask', 'React Native', 'MongoDB', 'Docker', 'XGBoost', 'Gemini API', 'WebSockets'],
         metrics: [
@@ -854,8 +1109,9 @@ def evaluate_loan_application():
       {
         id: 'rag-document-qa',
         title: 'RAG-Based Document Q&A System',
-        category: 'AI / GenAI',
+        category: 'Agentic & GenAI',
         badge: 'Vector Search Pipeline',
+        githubUrl: 'https://github.com/aniket792001/GEN-AI-Project',
         shortSummary: 'End-to-end question answering pipeline utilizing Hugging Face embeddings, FAISS vector search, and context-grounded LLM generation returning structured JSON with verifiable source citations.',
         techStack: ['Python', 'FastAPI', 'LangChain', 'Hugging Face', 'FAISS', 'Pydantic'],
         metrics: [
@@ -922,259 +1178,67 @@ async def ask_documents(query: str):
             'Production-ready FastAPI endpoint with complete OpenAPI / Swagger documentation.'
           ]
         }
-      },
-      {
-        id: 'finvoice-gemini-agent',
-        title: 'FinVoice AI — Multimodal Gemini Voice Underwriting Agent',
-        category: 'AI / GenAI',
-        badge: 'Multimodal Voice AI',
-        shortSummary: 'Real-time conversational voice agent leveraging Google Gemini API, WebSockets, and WhatsApp Business API for automated audio credit interviews and vernacular speech-to-text.',
-        techStack: ['Python', 'Gemini API', 'Flask-SocketIO', 'WebSockets', 'WhatsApp API', 'Docker'],
-        metrics: [
-          { label: 'Voice Latency', value: '<480ms' },
-          { label: 'Completion Rate', value: '+68%' },
-          { label: 'Supported Modalities', value: 'Audio+Chat' }
-        ],
-        overview: {
-          problem: 'Borrowers in rural and semi-urban communities often struggle with lengthy mobile form fields and text-heavy credit applications, resulting in high drop-off rates on loan origination pipelines.',
-          solution: 'Engineered FinVoice AI, a multimodal conversational agent utilizing Google Gemini API for bidirectional audio streaming, native speech recognition, and intent extraction. Synchronized across real-time WebSockets and WhatsApp Cloud webhook channels.',
-          architectureNodes: [
-            { title: '1. Audio Stream Ingestion', desc: 'Binary audio chunking via Flask-SocketIO WebSockets buffer and WhatsApp voice note webhooks.' },
-            { title: '2. Gemini Speech-to-Text & Intent Extractor', desc: 'Transcribes voice inputs and maps conversational responses into structured financial application schemas.' },
-            { title: '3. Dialog State Machine', desc: 'Guides applicant through missing documentation requirements with human-like contextual clarification.' },
-            { title: '4. Text-to-Speech Output Synthesizer', desc: 'Returns synthesized natural voice prompts to borrowers in real-time over active socket channels.' }
-          ],
-          keyDecisions: [
-            {
-              decision: 'Gemini Multimodal API over Separate STT + LLM + TTS',
-              rationale: 'Unified API reduced latency from 1,400ms to under 480ms by bypassing multi-hop external transcription services.'
-            },
-            {
-              decision: 'WhatsApp Business API Integration',
-              rationale: 'Allowed borrowers to submit loan applications directly from WhatsApp voice notes without downloading a separate heavy mobile app.'
-            }
-          ],
-          codeSnippet: {
-            filename: 'gemini_voice_orchestrator.py',
-            code: `import google.generativeai as genai
-from flask_socketio import emit
-
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel("gemini-1.5-flash")
-
-def handle_audio_stream(audio_bytes, applicant_session):
-    prompt = """
-    You are an empathetic loan officer assistant. Listen to the applicant's response.
-    Extract: monthly_income, employment_type, requested_amount.
-    If details are missing, politely ask the next question in natural conversational tone.
-    """
-    response = model.generate_content([
-        prompt,
-        {"mime_type": "audio/mp3", "data": audio_bytes}
-    ])
-    
-    emit("voice_response", {
-        "text": response.text,
-        "structured_data": parse_extracted_entities(response.text)
-    })`
-          },
-          results: [
-            'Boosted loan application completion rate by 68% among non-English speaking applicants.',
-            'Sub-480ms bidirectional voice response turnaround over WebSockets.',
-            'Zero drop-offs during peak WhatsApp message spikes through async worker pools.'
-          ]
-        }
-      },
-      {
-        id: 'realtime-fraud-stream',
-        title: 'Distributed Transaction Guard & Anomaly Scoring Service',
-        category: 'Backend & Systems',
-        badge: 'Distributed Security',
-        shortSummary: 'High-throughput microservice handling 1,500+ requests/sec with Redis sliding-window rate limiting, JWT token cryptographic validation, and real-time transaction anomaly heuristics.',
-        techStack: ['Python', 'FastAPI', 'Redis', 'Docker', 'JWT/OAuth', 'Pytest', 'Prometheus'],
-        metrics: [
-          { label: 'Throughput', value: '1.5k req/s' },
-          { label: 'P99 Latency', value: '<24ms' },
-          { label: 'False Positives', value: '<0.4%' }
-        ],
-        overview: {
-          problem: 'Fintech platforms face rapid credential stuffing, API abuse, and micro-transaction fraud patterns that can overwhelm relational databases and trigger financial losses.',
-          solution: 'Engineered an asynchronous FastAPI security boundary enforcing token-bucket rate limits in Redis, cryptographic JWT RBAC inspection, and heuristic velocity rules before allowing transactions into the core ledger.',
-          architectureNodes: [
-            { title: '1. Edge Rate Limiter (Redis Token Bucket)', desc: 'Sliding-window counter preventing bot flooding and API abuse across tenant endpoints.' },
-            { title: '2. Cryptographic JWT/OAuth Inspection', desc: 'Stateless signature verification and granular Role-Based Access Control (RBAC) validation.' },
-            { title: '3. Transaction Velocity Analyzer', desc: 'In-memory heuristics flagging sudden spikes in transaction frequency or abnormal geographical IPs.' },
-            { title: '4. Async Audit Event Dispatcher', desc: 'Dispatches signed audit logs asynchronously to persistent storage without adding latency to customer checkout.' }
-          ],
-          keyDecisions: [
-            {
-              decision: 'Redis Sliding-Window over Fixed Window Counters',
-              rationale: 'Fixed windows allow twice the allowed traffic at window boundary edges; sliding windows provide strictly enforced rate limits.'
-            },
-            {
-              decision: 'Async FastAPI Event Loop with Connection Pooling',
-              rationale: 'Achieved sub-24ms P99 response time handling 1,500 concurrent requests per single container.'
-            }
-          ],
-          codeSnippet: {
-            filename: 'security_middleware.py',
-            code: `import redis.asyncio as aioredis
-from fastapi import Request, HTTPException, status
-
-redis = aioredis.from_url("redis://localhost:6379", decode_responses=True)
-
-async def verify_rate_limit_and_rbac(request: Request, user_id: str, role: str, limit: int = 100):
-    key = f"rate_limit:{user_id}"
-    current_count = await redis.incr(key)
-    if current_count == 1:
-        await redis.expire(key, 60) # 60s sliding window
-        
-    if current_count > limit:
-        raise HTTPException(
-            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
-            detail="Rate limit exceeded. Try again in 60 seconds."
-        )
-        
-    if role not in ["finance_admin", "loan_officer"]:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Insufficient RBAC permissions for transaction processing."
-        )`
-          },
-          results: [
-            'Successfully defended against 100% of credential stuffing simulations in load testing.',
-            'Under 24ms P99 verification latency at 1,500 requests per second.',
-            'Comprehensive Pytest test suite covering RBAC boundaries and edge-case replay attempts.'
-          ]
-        }
-      },
-      {
-        id: 'ml-benchmark-suite',
-        title: 'Credit Risk ML Benchmark & Feature Engineering Suite',
-        category: 'Machine Learning',
-        badge: 'MLOps & Benchmark',
-        shortSummary: 'End-to-end Machine Learning pipeline benchmarking 10 classification algorithms with automated hyperparameter tuning, cross-validation, and SHAP explainability matrices.',
-        techStack: ['Python', 'XGBoost', 'LightGBM', 'Scikit-learn', 'SHAP', 'Pandas', 'Optuna'],
-        metrics: [
-          { label: 'Models Evaluated', value: '10' },
-          { label: 'Best Accuracy', value: '99.34%' },
-          { label: 'ROC-AUC Score', value: '0.998' }
-        ],
-        overview: {
-          problem: 'Credit risk assessment requires balancing raw predictive accuracy with regulatory explainability. Black-box models cannot justify why an applicant was denied credit, violating lending compliance laws.',
-          solution: 'Built an automated ML benchmarking framework comparing 10 classifiers (XGBoost, LightGBM, Random Forest, Logistic Regression, etc.). Implemented advanced feature engineering (cashflow volatility, debt service ratios) and SHAP tree explainers for instant compliance reporting.',
-          architectureNodes: [
-            { title: '1. Feature Engineering & Scaling', desc: 'Engineered non-linear debt ratios, transaction velocity deltas, and automated missing value imputation.' },
-            { title: '2. 10-Model Benchmark Arena', desc: 'Systematically trains and evaluates 10 classifiers using stratified 5-fold cross-validation.' },
-            { title: '3. Hyperparameter Optimization (Optuna)', desc: 'Bayesian search optimizing tree depth, learning rate, and regularizers to maximize F1-score.' },
-            { title: '4. SHAP Feature Attribution', desc: 'Calculates exact marginal feature contributions per loan decision for transparent auditability.' }
-          ],
-          keyDecisions: [
-            {
-              decision: 'XGBoost Winner with SHAP over Deep MLP',
-              rationale: 'XGBoost provided 99.34% accuracy with exact tree-SHAP calculations in under 2ms, providing full regulatory compliance.'
-            },
-            {
-              decision: 'Stratified K-Fold Cross Validation',
-              rationale: 'Guaranteed balanced representation of default risk classes across test splits, preventing model bias.'
-            }
-          ],
-          codeSnippet: {
-            filename: 'benchmark_arena.py',
-            code: `import shap
-import xgboost as xgb
-from sklearn.metrics import classification_report, roc_auc_score
-from sklearn.model_selection import StratifiedKFold
-
-def train_and_explain_champion_model(X_train, y_train, X_test, y_test):
-    # Benchmark Winner: XGBoost
-    clf = xgb.XGBClassifier(
-        n_estimators=300,
-        max_depth=6,
-        learning_rate=0.03,
-        subsample=0.85,
-        random_state=42
-    )
-    clf.fit(X_train, y_train)
-    
-    preds = clf.predict(X_test)
-    probs = clf.predict_proba(X_test)[:, 1]
-    
-    print("ROC-AUC:", roc_auc_score(y_test, probs))
-    print(classification_report(y_test, preds))
-    
-    # Generate Regulatory SHAP Attribution Values
-    explainer = shap.TreeExplainer(clf)
-    shap_values = explainer.shap_values(X_test)
-    return clf, explainer, shap_values`
-          },
-          results: [
-            'Achieved 99.34% classification accuracy and 0.998 ROC-AUC score on validation test sets.',
-            'Cut model training & hyperparameter search time by 45% via parallelized Optuna trials.',
-            'Production-ready SHAP explanation engine delivering instant decision audit reports.'
-          ]
-        }
       }
     ];
 
-    // Skills Matrix Data
+    // Skills Matrix Data (Strictly Aligned with Production Resume & Verified Projects)
     const SKILLS_PILLARS = [
       {
-        title: 'Generative AI & LLMs',
-        icon: 'sparkles',
-        color: 'indigo',
+        title: 'Mobile & Frontend',
+        icon: 'smartphone',
+        color: 'sky',
         skills: [
-          { name: 'LangGraph', level: 'Advanced', note: 'Cyclical graphs, state machines, reflection loops' },
-          { name: 'LangChain & RAG', level: 'Expert', note: 'Self-Correcting RAG, Multi-Hop retrieval' },
-          { name: 'Gemini API & LLMs', level: 'Expert', note: 'Multimodal voice/chat, Prompt Engineering' },
-          { name: 'Hugging Face', level: 'Advanced', note: 'Sentence embeddings, open-source model inference' },
-          { name: 'Vector DBs', level: 'Advanced', note: 'Qdrant, FAISS, hybrid dense + BM25Plus RRF' }
-        ]
-      },
-      {
-        title: 'Machine Learning',
-        icon: 'cpu',
-        color: 'cyan',
-        skills: [
-          { name: 'XGBoost', level: 'Expert', note: '99.34% accuracy on credit underwriting' },
-          { name: 'Random Forest', level: 'Advanced', note: 'Ensemble methods, tree bagging algorithms' },
-          { name: 'Feature Engineering', level: 'Expert', note: 'Financial velocity metrics, normalization' },
-          { name: 'Model Evaluation', level: 'Advanced', note: 'SHAP explainability, ROC-AUC, Precision/Recall' },
-          { name: 'Scikit-learn / Optuna', level: 'Advanced', note: 'Automated hyperparameter optimization' }
+          { name: 'React Native', level: 'Expert', note: 'Cross-platform iOS & Android mobile apps, navigation, UI' },
+          { name: 'Expo', level: 'Advanced', note: 'Managed workflow, mobile builds, instant testing' },
+          { name: 'React.js', level: 'Advanced', note: 'Component architectures, state hooks, responsive SPAs' },
+          { name: 'Tailwind CSS', level: 'Expert', note: 'Modern responsive styling & dark-theme interfaces' },
+          { name: 'JavaScript (ES6+)', level: 'Advanced', note: 'Modern asynchronous programming, REST API integration' }
         ]
       },
       {
         title: 'Backend & Microservices',
         icon: 'server',
-        color: 'sky',
+        color: 'indigo',
         skills: [
-          { name: 'Python', level: 'Expert', note: 'FastAPI, Flask, Asyncio, Pydantic, Celery' },
-          { name: 'RESTful API Design', level: 'Expert', note: '100+ endpoints built, OpenAPI specs' },
-          { name: 'Security & Auth', level: 'Advanced', note: 'JWT tokens, OAuth2, RBAC, Rate Limiting' },
-          { name: 'Pytest & QA', level: 'Advanced', note: 'Comprehensive unit & API integration suites' },
-          { name: 'JavaScript & SQL', level: 'Proficient', note: 'Modern ES6+, complex SQL schemas & joins' }
+          { name: 'Python', level: 'Expert', note: 'FastAPI, Flask, Asyncio, Pydantic, Microservices' },
+          { name: 'RESTful API Design', level: 'Expert', note: '100+ endpoints built, OpenAPI & Swagger specs' },
+          { name: 'Security & Auth', level: 'Advanced', note: 'JWT tokens, OAuth, RBAC, Rate Limiting' },
+          { name: 'Unit & API Testing', level: 'Advanced', note: 'Pytest test suites, input validation, QA' },
+          { name: 'Distributed Microservices', level: 'Advanced', note: 'Multi-service architecture deployed across servers' }
         ]
       },
       {
-        title: 'Databases & Storage',
-        icon: 'database',
-        color: 'emerald',
+        title: 'AI, ML & GenAI',
+        icon: 'sparkles',
+        color: 'cyan',
         skills: [
-          { name: 'MongoDB', level: 'Expert', note: 'Document aggregation pipelines, indexing' },
-          { name: 'MySQL & SQLite', level: 'Advanced', note: 'Relational schemas, ACID compliance' },
-          { name: 'Redis', level: 'Advanced', note: 'Sliding window rate-limiting, distributed caching' },
-          { name: 'Qdrant & FAISS', level: 'Advanced', note: 'Dense vector indexing, fast in-memory ANN' }
+          { name: 'Machine Learning', level: 'Expert', note: 'Classification (Logistic Regression, Random Forest, XGBoost)' },
+          { name: 'Gemini API', level: 'Expert', note: 'Multimodal voice, Speech-to-Text & TTS integration' },
+          { name: 'RAG & Retrieval', level: 'Advanced', note: 'Document retrieval, context grounding, prompt engineering' },
+          { name: 'Feature Engineering', level: 'Expert', note: 'Model evaluation, ROC-AUC, precision & recall' },
+          { name: 'LangChain & Hugging Face', level: 'Advanced', note: 'Sentence embeddings & vector retrieval pipelines' }
         ]
       },
       {
         title: 'Real-Time & Integrations',
         icon: 'activity',
+        color: 'emerald',
+        skills: [
+          { name: 'WebSockets', level: 'Advanced', note: 'Flask-SocketIO real-time chat & in-app calling' },
+          { name: 'WhatsApp API', level: 'Advanced', note: 'Cloud webhook messaging & communication pipelines' },
+          { name: 'Speech-to-Text (STT)', level: 'Advanced', note: 'Audio capture & transcription processing' },
+          { name: 'Text-to-Speech (TTS)', level: 'Advanced', note: 'Natural conversational audio playback' }
+        ]
+      },
+      {
+        title: 'Databases & Storage',
+        icon: 'database',
         color: 'cyan',
         skills: [
-          { name: 'WebSockets', level: 'Advanced', note: 'Flask-SocketIO real-time voice & chat' },
-          { name: 'WhatsApp API', level: 'Advanced', note: 'Cloud webhook message & voice note pipelines' },
-          { name: 'SSE (Streaming)', level: 'Advanced', note: 'FastAPI Server-Sent Events token streams' },
-          { name: 'Speech-to-Text / TTS', level: 'Advanced', note: 'Gemini multimodal voice integrations' }
+          { name: 'MongoDB', level: 'Expert', note: 'Document aggregation pipelines, indexing' },
+          { name: 'MySQL', level: 'Advanced', note: 'Relational schemas, queries, ACID compliance' },
+          { name: 'Redis', level: 'Advanced', note: 'Sliding window rate-limiting & distributed caching' },
+          { name: 'FAISS & Vector Stores', level: 'Advanced', note: 'Dense vector indexing & fast similarity search' }
         ]
       },
       {
@@ -1182,10 +1246,10 @@ def train_and_explain_champion_model(X_train, y_train, X_test, y_test):
         icon: 'layers',
         color: 'indigo',
         skills: [
-          { name: 'Docker & Compose', level: 'Advanced', note: 'Microservices containerization, multi-container' },
-          { name: 'Git & GitHub', level: 'Expert', note: 'Branching workflows, GitHub Actions CI/CD' },
-          { name: 'Linux / Bash', level: 'Advanced', note: 'Shell scripting, server environment configs' },
-          { name: 'Development Tools', level: 'Expert', note: 'Cursor, VS Code, Postman, PyCharm, Jupyter' }
+          { name: 'Docker', level: 'Advanced', note: 'Containerization across distributed server environments' },
+          { name: 'Git & GitHub', level: 'Expert', note: 'Branching workflows, version control & code review' },
+          { name: 'Development Tools', level: 'Expert', note: 'Cursor, VS Code, Jupyter, PyCharm' },
+          { name: 'API Debugging & Docs', level: 'Expert', note: 'Postman, Swagger/OpenAPI interactive testing' }
         ]
       }
     ];
@@ -1247,10 +1311,25 @@ def train_and_explain_champion_model(X_train, y_train, X_test, y_test):
           </div>
 
           <div class="px-7 py-4 bg-slate-950/50 border-t border-slate-800/80 flex items-center justify-between">
-            <span class="text-xs text-slate-400 flex items-center gap-1.5">
-              <i data-lucide="git-branch" class="w-3.5 h-3.5 text-cyan-400"></i>
-              Deep-Dive Available
-            </span>
+            ${project.githubUrl ? `
+              <a 
+                href="${project.githubUrl}" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-xs text-slate-400 hover:text-cyan-400 flex items-center gap-1.5 transition-colors"
+                title="View repository on GitHub"
+              >
+                <svg class="w-3.5 h-3.5 fill-current text-cyan-400" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path>
+                </svg>
+                <span>Code / Repo</span>
+              </a>
+            ` : `
+              <span class="text-xs text-slate-400 flex items-center gap-1.5">
+                <i data-lucide="git-branch" class="w-3.5 h-3.5 text-cyan-400"></i>
+                Deep-Dive Available
+              </span>
+            `}
 
             <button 
               onclick="openModal('${project.id}')"
@@ -1373,6 +1452,15 @@ def train_and_explain_champion_model(X_train, y_train, X_test, y_test):
           <span>${res}</span>
         </div>
       `).join('');
+
+      // Update Modal GitHub Link
+      const modalGhLink = document.getElementById('modal-github-link');
+      if (modalGhLink && activeProject.githubUrl) {
+        modalGhLink.href = activeProject.githubUrl;
+        modalGhLink.classList.remove('hidden');
+      } else if (modalGhLink) {
+        modalGhLink.href = 'https://github.com/aniket792001';
+      }
 
       // Reset Tab to Architecture
       switchTab('architecture');
